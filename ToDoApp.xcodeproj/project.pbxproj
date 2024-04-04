@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B502BB02BBEB2D100AB052B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B502BAF2BBEB2D100AB052B /* CoreDataManager.swift */; };
+		9B502BB32BBEBC5600AB052B /* ToDoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B502BB12BBEBC5600AB052B /* ToDoData+CoreDataClass.swift */; };
+		9B502BB42BBEBC5600AB052B /* ToDoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B502BB22BBEBC5600AB052B /* ToDoData+CoreDataProperties.swift */; };
+		9B502BB62BBEC66A00AB052B /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B502BB52BBEC66A00AB052B /* MyColor.swift */; };
+		9B502BB82BBEC6C000AB052B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B502BB72BBEC6C000AB052B /* UIColor+Extension.swift */; };
 		9B9420302BBAD148003BB11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94202F2BBAD148003BB11A /* AppDelegate.swift */; };
 		9B9420322BBAD148003BB11A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9420312BBAD148003BB11A /* SceneDelegate.swift */; };
 		9B9420342BBAD148003BB11A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9420332BBAD148003BB11A /* ViewController.swift */; };
@@ -14,9 +19,16 @@
 		9B94203A2BBAD148003BB11A /* ToDoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B9420382BBAD148003BB11A /* ToDoApp.xcdatamodeld */; };
 		9B94203C2BBAD149003BB11A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B94203B2BBAD149003BB11A /* Assets.xcassets */; };
 		9B94203F2BBAD149003BB11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B94203D2BBAD149003BB11A /* LaunchScreen.storyboard */; };
+		9B9420512BBC1C50003BB11A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9420502BBC1C50003BB11A /* DetailViewController.swift */; };
+		9B9420532BBC1CA2003BB11A /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9420522BBC1CA2003BB11A /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B502BAF2BBEB2D100AB052B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9B502BB12BBEBC5600AB052B /* ToDoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9B502BB22BBEBC5600AB052B /* ToDoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9B502BB52BBEC66A00AB052B /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		9B502BB72BBEC6C000AB052B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9B94202C2BBAD148003BB11A /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B94202F2BBAD148003BB11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9420312BBAD148003BB11A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +38,8 @@
 		9B94203B2BBAD149003BB11A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B94203E2BBAD149003BB11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B9420402BBAD149003BB11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9420502BBC1C50003BB11A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9B9420522BBC1CA2003BB11A /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +74,53 @@
 			children = (
 				9B94202F2BBAD148003BB11A /* AppDelegate.swift */,
 				9B9420312BBAD148003BB11A /* SceneDelegate.swift */,
-				9B9420332BBAD148003BB11A /* ViewController.swift */,
-				9B9420352BBAD148003BB11A /* Main.storyboard */,
+				9B94204F2BBC126C003BB11A /* Helpers */,
+				9B94204E2BBC1266003BB11A /* Models */,
+				9B94204D2BBC125D003BB11A /* Views */,
+				9B94204C2BBC1252003BB11A /* Controllers */,
 				9B94203B2BBAD149003BB11A /* Assets.xcassets */,
 				9B94203D2BBAD149003BB11A /* LaunchScreen.storyboard */,
 				9B9420402BBAD149003BB11A /* Info.plist */,
 				9B9420382BBAD148003BB11A /* ToDoApp.xcdatamodeld */,
 			);
 			path = ToDoApp;
+			sourceTree = "<group>";
+		};
+		9B94204C2BBC1252003BB11A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B9420332BBAD148003BB11A /* ViewController.swift */,
+				9B9420502BBC1C50003BB11A /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B94204D2BBC125D003BB11A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B9420352BBAD148003BB11A /* Main.storyboard */,
+				9B9420522BBC1CA2003BB11A /* ToDoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B94204E2BBC1266003BB11A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B502BB12BBEBC5600AB052B /* ToDoData+CoreDataClass.swift */,
+				9B502BB22BBEBC5600AB052B /* ToDoData+CoreDataProperties.swift */,
+				9B502BAF2BBEB2D100AB052B /* CoreDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B94204F2BBC126C003BB11A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B502BB52BBEC66A00AB052B /* MyColor.swift */,
+				9B502BB72BBEC6C000AB052B /* UIColor+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B502BB02BBEB2D100AB052B /* CoreDataManager.swift in Sources */,
 				9B9420342BBAD148003BB11A /* ViewController.swift in Sources */,
 				9B9420302BBAD148003BB11A /* AppDelegate.swift in Sources */,
+				9B502BB82BBEC6C000AB052B /* UIColor+Extension.swift in Sources */,
+				9B502BB42BBEBC5600AB052B /* ToDoData+CoreDataProperties.swift in Sources */,
+				9B502BB32BBEBC5600AB052B /* ToDoData+CoreDataClass.swift in Sources */,
+				9B502BB62BBEC66A00AB052B /* MyColor.swift in Sources */,
 				9B9420322BBAD148003BB11A /* SceneDelegate.swift in Sources */,
 				9B94203A2BBAD148003BB11A /* ToDoApp.xcdatamodeld in Sources */,
+				9B9420512BBC1C50003BB11A /* DetailViewController.swift in Sources */,
+				9B9420532BBC1CA2003BB11A /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +362,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaeul.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,8 +393,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,9 +402,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaeul.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
