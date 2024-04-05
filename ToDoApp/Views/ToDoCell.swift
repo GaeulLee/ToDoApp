@@ -21,9 +21,15 @@ class ToDoCell: UITableViewCell {
         }
     }
     
-//    // (델리게이트 대신에) 실행하고 싶은 클로저 저장
-//    // 뷰컨트롤러에 있는 클로저 저장할 예정 (셀(자신)을 전달)
-//    var updateButtonPressed: (ToDoCell) -> Void = { (sender) in }
+    // (델리게이트 대신에) 실행하고 싶은 클로저 저장
+    // 뷰컨트롤러에 있는 클로저 저장할 예정 (셀(자신)을 전달)
+    var updateButtonPressed: (ToDoCell) -> Void = { (sender) in }
+    /*  ⭐️⭐️⭐️ 메인 뷰컨트롤러의 tableView extension - cellForRowAt 메서드에 아래와 같이 선언되어 있음
+     
+        cell.updateButtonPressed = { [weak self] (senderCell) in
+            self?.performSegue(withIdentifier: "toDetailView", sender: indexPath)
+        }
+    */
     
     // 스토리보드의 생성자
     override func awakeFromNib() {
@@ -60,7 +66,7 @@ class ToDoCell: UITableViewCell {
     }
 
     @IBAction func updateButtonTapped(_ sender: UIButton) {
-//        // 뷰컨트롤로에서 전달받은 클로저를 실행 (내 자신 ToDoCell을 전달하면서) ⭐️
-//        updateButtonPressed(self)
+        // 뷰컨트롤로에서 전달받은 클로저를 실행 (내 자신 ToDoCell을 전달하면서) ⭐️
+        updateButtonPressed(self)
     }
 }

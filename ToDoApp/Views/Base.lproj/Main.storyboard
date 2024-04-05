@@ -117,7 +117,7 @@
                     <navigationItem key="navigationItem" id="Bgg-LD-pjz"/>
                     <connections>
                         <outlet property="tableView" destination="zM0-Qb-5vC" id="x4h-0b-bUl"/>
-                        <segue destination="57m-89-fbm" kind="show" identifier="ToDoCell" id="jw3-mL-SD3"/>
+                        <segue destination="57m-89-fbm" kind="show" identifier="toDetailView" id="jw3-mL-SD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
