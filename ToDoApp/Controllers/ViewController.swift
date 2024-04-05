@@ -73,6 +73,12 @@ extension ViewController: UITableViewDataSource {
             // 뷰컨트롤러에 있는 세그웨이의 실행
             self?.performSegue(withIdentifier: "toDetailView", sender: indexPath)
         }
+        cell.deleteButtonPressed = { (senderCell) in
+            self.coreDataManager.deleteToDoData(data: senderCell.toDoData!)
+            
+            print("삭제 완료")
+            self.tableView.reloadData()
+        }
         
         cell.selectionStyle = .none
         

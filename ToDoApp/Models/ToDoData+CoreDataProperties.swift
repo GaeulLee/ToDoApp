@@ -22,7 +22,7 @@ extension ToDoData {
 
     var dateString: String? {
         let myFormatter = DateFormatter()
-        myFormatter.dateFormat = "yyyy-MM-dd"
+        myFormatter.dateFormat = "yyyy.MM.dd - HH:mm"
         guard let date = self.date else { return "" }
         let savedDateString = myFormatter.string(from: date)
         return savedDateString

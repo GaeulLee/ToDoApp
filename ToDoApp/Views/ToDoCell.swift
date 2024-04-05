@@ -13,6 +13,7 @@ class ToDoCell: UITableViewCell {
     @IBOutlet weak var toDoTextLabel: UILabel!
     @IBOutlet weak var dateTextLabel: UILabel!
     @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     // ToDoData를 전달받을 변수 (전달 받으면 ==> 표시하는 메서드 실행) ⭐️
     var toDoData: ToDoData? {
@@ -30,6 +31,9 @@ class ToDoCell: UITableViewCell {
             self?.performSegue(withIdentifier: "toDetailView", sender: indexPath)
         }
     */
+    
+    var deleteButtonPressed: (ToDoCell) -> Void = { (sender) in }
+    
     
     // 스토리보드의 생성자
     override func awakeFromNib() {
@@ -55,9 +59,9 @@ class ToDoCell: UITableViewCell {
         let color = MyColor(rawValue: colorNum) ?? .red
         updateButton.backgroundColor = color.buttonColor
         backView.backgroundColor = color.backgoundColor
+        deleteButton.tintColor = color.buttonColor
     }
     
-
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -68,5 +72,9 @@ class ToDoCell: UITableViewCell {
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         // 뷰컨트롤로에서 전달받은 클로저를 실행 (내 자신 ToDoCell을 전달하면서) ⭐️
         updateButtonPressed(self)
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        deleteButtonPressed(self)
     }
 }

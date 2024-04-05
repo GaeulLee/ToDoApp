@@ -64,7 +64,7 @@ final class CoreDataManager {
     }
     
     // MARK: - [Delete] 코어데이터에서 데이터 삭제하기 (일치하는 데이터 찾아서 ===> 삭제)
-    func deleteToDo(data: ToDoData) {
+    func deleteToDoData(data: ToDoData) {
         guard let date = data.date else { return }
         
         if let context = context { // 임시저장소 있는지 확인
